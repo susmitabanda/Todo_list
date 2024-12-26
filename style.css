@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(216, 181, 249);
+}
+.container{
+    height: 100%;
+    min-height: 99.8vh;
+    background: linear-gradient(150deg,#59f0a2,#020c3f);
+    border: 1px solid black;
+    
+}
+.todo{
+    box-shadow: 8px 8px 10px rgb(26, 26, 26);
+    height: 320px;
+    width: 100%;
+    overflow-y: scroll; 
+    scrollbar-width: thin;
+    scrollbar-color: #d7beff #f7f8f9;
+    
+    max-width: 540px;
+    background: #fffffe;
+    margin:100px auto 20px;
+    padding: 40px 30px 70px;
+    color: #231483;
+    border-radius: 10px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+}
+
+.todo::-webkit-scrollbar {
+    display: none;
+}
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+.todo {
+    -ms-overflow-style:none;  /* IE and Edge */
+    scrollbar-width:none;  /* Firefox */
+}
+
+.todo h2{
+    text-shadow: 2px 2px 3px rgb(29, 234, 234);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-size: 40px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+.todo h2 img{ 
+    height: 120px;
+    width: 120px;
+    margin-left: 10px;
+    cursor: pointer;
+    
+}
+/* -----------------input --------------------------------------------------------- */
+::placeholder{
+    color: #dccff1;
+    opacity: 0.8;
+}
+
+.inputclass{
+    display: flex;
+    gap:0;
+    justify-content: space-between;
+    
+}
+.inputclass input{
+    /* flex: 1; */
+    width: 88%;
+    height: 35px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border: 1px solid rgb(197, 179, 254);
+    margin:0;
+    padding-left: 20px;
+    outline: none;
+    background: transparent;
+    font-family:cursive;
+    color: #020c3f;
+    
+}
+
+.inputclass button{
+    margin:0;
+    width: 50px;
+    height: 37px;
+    background-color:rgb(36, 12, 106) ;
+    color: white;
+    font-family:cursive;
+    border: 1px solid rgb(36, 12, 106);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    outline: none;
+    font-size: 17px;
+
+}
+.inputclass button:hover{
+    cursor: pointer;
+
+}
+
+/* -----------------------task------------------------------------------ */
+ul li{
+    list-style: none;
+    font-size: 18px;
+    padding: 10px 8px 8px 50px;
+    user-select: none;
+    font-family: cursive;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 33px;
+    width: 33px;
+    border-radius: 50%;
+    background-image: url(unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left: 8px;
+}
+ul li.checked{
+    color:rgb(195, 195, 254);
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(checked.png);
+    
+}
+
+/* ---------------ul li span --------------------------------------------------------- */
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #020c3f;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+
+}
+
+ul li span:hover{
+    background: rgb(219, 215, 252);
+}
